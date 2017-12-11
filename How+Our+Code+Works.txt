@@ -1,0 +1,26 @@
+How Our Code Works:
+
+
+Inputs:
+1. 2016 Flight Delay Data (flight_data.csv)
+2. 2016 Chicago Weather Data (chicago_weather_2016.csv)
+
+Outputs:
+1. Conclusions about lengths of delays and causes of delays in Chicago for 2016
+2. Visualizations using Plotly
+
+Algorithm:
+1. Import flight_data.csv
+2. Create a new dataframe (flights_df) with select columns from flight_data.csv
+3. Find the value counts of the number of departure delays from each departure city
+4. Create a dataframe (chicago_delays_sorted_df) that only shows delays from Chicago, IL and then sorts the dataframe in date and time order.
+5. Import chicago_weather_2016.csv
+6. Merge chicago_weather_2016 with chicago_delays_sorted_df by matching the dates from each data set.
+7. Create a new column in this new merged dataframe (merged_chicago_data) called "Month" and label each flight's month according to its date.
+8. Get value counts of the weather events causing each delay in Chicago.
+9. Present the value counts of the weather events in a dataframe to use to visualize it into a Plotly bar chart.
+10. Filter the merged_chicago_data by month
+11. Graph the counts of each month's weather events that caused delays using Plotly pie charts.
+12. Graph the number of delays per month using a Plotly bar chart.
+13. Sort the Chicago delay information by the length of the delay (delay_time_sorted_df)
+14. Look at the lengths of delays for each month and then graph each month's delays on Plotly scatterplots to exemplify which months had the longest delays.
